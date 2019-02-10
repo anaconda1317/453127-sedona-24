@@ -108,11 +108,52 @@
   			<p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
   			</p>
         <!-- ЗДЕСЬ ФОРМА -->
-        <form>
-          <button class="search-form submit-btn" type="submit" name="search-submit">Найти</button>
-        </form>
-  		</section>
+        <section class="modal modal-search-form">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+<!-- КНОПКА ПОИСКА ГОСТИНИЦЫ В СЕДОНЕ -->
+                <button class="search-form open-btn" type="button" name="serch-open">Поиск гостиницы в Седоне</button>
+<!-- дата заезда -->
+          <p class="search-item">
+              <label for="check-in">Дата заезда:</label>
+              <input id="check-in" type="text" name="check-in" value="" placeholder="24 апреля 2017">
+              <button class="search-form calendar-btn" type="button" name="calendar">&&</button>
+          </p>
+<!-- дата выезда -->
+          <p class="search-item">
+              <label for="check-out">Дата выезда:</label>
+              <input id="check-out" type="text" name="check-out" value="" placeholder="4 июля 2017">
+              <button class="search-form calendar-btn" type="button" name="calendar">&&</button>
+          </p>
+<!-- ВЗРОСЛЫЕ -->
+              <p class="search-item">
+                <label for="adults">Взрослые</label>
+                <button class="search-form input-control-minus" type="button"><span class="visually-hidden">Увеличить</span></button>
+                <input id="adults" type="text" name="adults" value="2"  >
+                <button class="search-form input-control-plus" type="button"><span class="visually-hidden">Уменьшить</span></button>
+              </p>
+<!-- ДЕТИ -->
+              <p class="search-item">
+                <label for="kids">Дети</label>
+                <button class="search-form input-control-minus" type="button"><span class="visually-hidden">Увеличить</span></button>
+                <input id="kids" type="text" name="kids" value="0">
+                <button class="search-form input-control-plus" type="button"><span class="visually-hidden">Уменьшить</span></button>
+              </p>
+<!-- КНОПКА ПОИСК -->
+              <button class="search-form submit-btn" type="submit" name="search-submit">Найти</button>
+            </form>
+        </section>
+        <section class="modal modal-map">
+          <h2 class="visually_hidden">Расположение Седоны на карте</h2>
+          <div>
+            <img class="map__img" src="img/map.png" width="1200" height="593" alt="Седона на карте">
+          </div>
+          <span class="visually-hidden">Седона на интерактивной карте</span>
+        </section>
 </main>
+
+
+
+
 
 <!-- FOOTER -->
     <footer>
@@ -136,18 +177,18 @@
 
 
 <!-- поиск гостиницы в Седоне всплывашка   всплывашки в конце документа размещать-->
-  	<section class="modal modal-search-form">
-  		<h2>Поиск гостиницы в Седоне</h2>
+  	<!-- <section class="modal modal-search-form">
+  		<h2>Поиск гостиницы в Седоне</h2> -->
   		<!-- Здесь будет форма -->
     
-  	</section>
+  	<!-- </section> -->
 
 <!-- КАРТА всплывашка всплывашки в конце документа размещать
  -->
 
- <section class="modal modal-map">
+ <!-- <section class="modal modal-map">
  	<h2 class="visually_hidden">Расположение Седоны на карте</h2>
- </section>
+ </section> -->
 
   </body>
 </html>

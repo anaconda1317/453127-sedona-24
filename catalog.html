@@ -29,10 +29,60 @@
   <h1 class="visually-hidden">Поиск отелей в Седоне штат Аризона, США</h1>
 	<section class="hotel filters">
 		<h2 class="visually-hidden">Фильтр отелей</h2>
-		<!-- <form>
-			
-		</form> -->
-	</section>
+    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+		  <fieldset>
+      <legend>Инфраструктура:</legend>
+        <ul>
+<!-- БАССЕЙН -->
+          <li class="filter-options">
+          <input class="filter-checkbox" type="checkbox" name="pool" id="pool" checked>
+          <label for="pool">Бассейн</label>
+           </li>
+<!-- ПАРКОВКА -->   
+          <li class="filter-options">
+          <input class="filter-checkbox" type="checkbox" name="parking" id="parking">
+          <label for="parking">Парковка</label>
+          </li>
+<!-- ВАЙ-ФАЙ -->  
+          <li class="filter-options">
+          <input class="filter-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+          <label for="wi-fi">WI-FI</label>
+          </li>
+        </ul>
+      </fieldset>
+<!-- ТИПЫ ЖИЛЬЯ --> 
+      <fieldset>
+        <legend>Тип жилья:</legend>
+        <ul>
+          <li class="filter-options">
+              <input class="filter-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+              <label for="hotel">Гостиница</label>
+          </li>
+          <li class="filter-options">
+            <input class="filter-checkbox" type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+          </li>
+          <li class="filter-options">
+            <input class="filter-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+            <label for="apartments">Апартаменты</label>
+          </li>
+        </ul>
+      </fieldset>
+<!-- CТОИМОСТЬ В СУТКИ - ВЫБОР ОТ И ДО-->       
+      <fieldset>
+        <legend>Стоимость в сутки (p):</legend>
+          <label class="filters-price-min">От
+          <input class="filter-price-input-min" type="text" name="min-price-input" value="0">
+          </label>
+          <label class="filters-price-max">До
+          <input class="filter-price-input-max" type="text" name="max-price-input" value="3000">
+          </label>
+ <!--          <div>КАК ВЫБОР ЦЕНЫ ПО ШКАЛЕ ДЕЛАТЬ Я ВООБЩЕ НЕ ЗНАЮ</div> -->
+      </fieldset>
+      <button type="submit" class="filter-btn">Показать</button>
+    </form>
+  </section>
+  
 
 
 		<section class="hotels-sort">
