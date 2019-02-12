@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - сайт туристического городка</title>
+    link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
   <header class="page-header">
 <!-- ЛОГО -->
   <nav class="main navigation">
-    <a class="main-header-logo" href="index.html">
+    <a class="main-header-logo">
       <img class="main-header-logo" src="img/sedona-logo.png" width="138" height="70" alt="Sedona logo">
     </a>
 <!-- ЛОГО -->     
@@ -18,7 +21,7 @@
       <li><a href="info.html">Информация</a></li>
       <li><a href="foto_video.html">Фото и видео</a></li>
       <li><a href="map.html">Карта штата</a></li>
-      <li><a href="hotel.html">Гостиницы</a></li>
+      <li><a href="catalog.html">Гостиницы</a></li>
     </ul>
   </nav>
 <!-- МЕНЮ -->
@@ -32,7 +35,7 @@
 
 <!-- section main show -->
 <section class="showcase-bg">
- 		      <img src="img/showcase-bg.jpg" width="1200" height="800" alt="Sedona">
+ 		      <img src="img/welcome.png" width="458" height="352" alt="Sedona">
  	<p class="about-slogan">Седона — небольшой городок в Аризоне, зaслуживающий большего!</p>
        <p class="about-lead">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 </section> 
@@ -46,7 +49,8 @@
       <h3 class="reason-title">Настоящий городок</h3>
         <span class="reason-number">— №1 —</span>
         <p class="reason-text">Седона — не аттракцион для туристов,<br>там течет своя жизнь</p>
-        <p class="reason-text"><img src="img/sedona-photo1.jpg" width="800" height="256" alt="Седона"></p>
+        <p class="reason-foto">
+          <img src="img/sedona-photo1.jpg" width="800" height="256" alt="Седона"></p>
         <!-- 3 ikon --> 
       <ul class="feature-list">
         <li class="feature-item">
@@ -70,7 +74,7 @@
       </ul>
 <!-- section_reasons reason_2 -->
         <li>
-           <p>
+           <p p class="reason-foto">
             <img src="img/sedona-photo2.jpg" width="800" height="256" alt="Седона. Мост дьявола">
           </p>
         <h3 class="reason-title">Там есть Мост<br>дьявола</h3>
@@ -145,15 +149,11 @@
         <section class="modal modal-map">
           <h2 class="visually_hidden">Расположение Седоны на карте</h2>
           <div>
-            <img class="map__img" src="img/map.png" width="1200" height="593" alt="Седона на карте">
+            <img class="modal-map" src="img/map.png" width="1200" height="593" alt="Седона на карте">
           </div>
-          <span class="visually-hidden">Седона на интерактивной карте</span>
+        <!--   <p class="visually-hidden">Седона на интерактивной карте</p> -->
         </section>
 </main>
-
-
-
-
 
 <!-- FOOTER -->
     <footer>
@@ -170,7 +170,7 @@
 <!-- КОПИРАЙТ -->
     <p class="footer-copyright">
       <b>WEBSITE BY</b>
-      <a class="button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="54" height="51" alt="Twitter"> HTML Academy</a>
+      <a class="button" href=" https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="54" height="51" alt="HTML Academy"> HTML Academy</a>
     </p>
     </footer>
 <!-- FOOTER END -->   
