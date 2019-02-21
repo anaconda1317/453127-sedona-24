@@ -16,16 +16,304 @@
   font-style: normal; 
 }
 
+ 
+* {
+  outline: solid 1px red;
+}
 
 body {
+  margin: 0;
+  padding: 0;
+  min-width: 960px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #fff;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #f2f2f2;
+  /*background-image: url("../img/barbershop-index/bg.jpg");*/
+  background-position: top center;
+  background-repeat: no-repeat;
 
-  background: #2a3e45; /* для демо */
+  /*background: #2a3e45;  для демо */
 }
+
+/*.visually-hidden:not(:focus):not(:active), {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}*/
+
+/*каталог*/
+.inner-page {
+  color: #000000;
+
+  background-color: #f9f6f3;
+  background-image: url("../img/barbershop-index/pattern-light.png");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff; 
+}
+
+.showcase-bg {
+  position: absolute;
+  display: block;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+
+/*ХЕДЕР*/
+.page-header {
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+}
+
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -70px;
+  z-index: 1;
+}
+
+
+.showcase {
+  position: relative;
+  min-height: 508px;
+  padding-top: 76px;
+  padding-bottom: 80px;
+  background-color: #e3edf6;
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 58px;
+  background:  url(../img/showcase-shape.png) no-repeat center bottom;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.showcase-img {
+  position: relative;
+  display: block;
+  width: 458px;
+  height: 352px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+.main-nav {
+  position: relative;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000;
+
+  background-color: #fff;
+}
+
+
+
+.main-nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+
+  background-color: #fff;
+}
+
+
+.main-nav-menu a {
+  color: #000;
+}
+
+.main-nav-menu a:hover,
+.main-nav-menu a:focus,
+.main-nav-menu a:hover,
+.main-nav-menu a:focus {
+  background-color: #242424;
+}
+
+
+.reason {
+  position: relative;
+  display: flex;
+  min-height: 256px;
+  overflow: hidden;
+}
+
+
+.reason-info {
+  width: 33.33%;
+  min-height: 256px;
+  flex-grow: 1;
+  padding: 47px 38px 39px;
+  background-color: #81b3d2;
+  color: #fff;
+  text-align: center;
+}
+
+.reason-img {
+  position: relative;
+  width: 66.66%;
+  background-color: #deebf4;
+  /*height: inherit;*/
+}
+
+.reason-foto {
+
+}
+
+.reason-title {
+  margin: 0 auto 23px;
+  max-width: 160px;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+
+
+
+
+
+
+
+
+.features {
+  padding: 56px 0 82px;
+   background-color: #fff;
+}
+
+
+.feature-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.feature-item {
+  position: relative;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 105px;
+  text-align: center;
+}
+
+
+/*для иконок*/
+/*.features-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+}
+*/
+
+.features-item-title {
+  margin: 0 0 23px;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.features-item-text {
+  margin: 0;
+}
+
+/*3,4,5 причины*/
+.reasons {
+  padding: 47px 0 60px;
+  background-color: #f2f2f2;
+}
+
+.reasons-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reasons-item {
+  position: relative;
+  width: 33.33%;
+  padding-left: 48px;
+  padding-right: 48px;
+  text-align: center;
+}
+
+.reasons-item-title {
+  margin: 0 auto 23px;
+  max-width: 160px;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.reasons-item-text {
+  margin: 21px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
