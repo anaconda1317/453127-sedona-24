@@ -1,3 +1,10 @@
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+
+
+
 @font-face {
   font-family: "PT Sans";
   src:
@@ -21,10 +28,11 @@
   outline: solid 1px red;
 }
 
+
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  min-width: 960px;
+  min-width: 768px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 500;
@@ -41,16 +49,13 @@ body {
   /*background: #2a3e45;  для демо */
 }
 
-/*.visually-hidden:not(:focus):not(:active), {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  overflow: hidden;
-}*/
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /*каталог*/
 .inner-page {
@@ -62,10 +67,47 @@ body {
   background-repeat: repeat;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+
+
+
+
+
+
+
+
+a {
+  text-decoration: none;
 }
+
+
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+
+
+
+
+
+
+
+/*.showcase-bg {
+  position: absolute;
+  display: block;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: auto;
+}*/
 
 
 .container {
@@ -73,19 +115,10 @@ img {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff; 
+  background-color: #fff;
+  box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+  
 }
-
-.showcase-bg {
-  position: absolute;
-  display: block;
-  top: 56px;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-}
-
 
 /*ХЕДЕР*/
 .page-header {
@@ -94,72 +127,32 @@ img {
   z-index: 1;
 }
 
+.main-nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+
+  background-color: #fff;
+}
 
 .logo {
   position: absolute;
   top: 0;
   left: 50%;
   margin-left: -70px;
-  z-index: 1;
 }
 
-
-.showcase {
-  position: relative;
-  min-height: 508px;
-  padding-top: 76px;
-  padding-bottom: 80px;
-  background-color: #e3edf6;
-}
-
-.showcase::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 58px;
-  background:  url(../img/showcase-shape.png) no-repeat center bottom;
-  background-size: 100% auto;
-  z-index: 1;
-}
-
-.showcase-img {
-  position: relative;
-  display: block;
-  width: 458px;
-  height: 352px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-}
-
-
-
-a {
-  text-decoration: none;
-}
 
 .main-nav {
   position: relative;
   font-size: 14px;
   line-height: 26px;
-  color: #000;
-
-  background-color: #fff;
-}
-
-
-
-.main-nav-menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
   color: #000;
 
   background-color: #fff;
@@ -174,9 +167,119 @@ a {
 .main-nav-menu a:focus,
 .main-nav-menu a:hover,
 .main-nav-menu a:focus {
-  background-color: #242424;
+  color: #242424;
 }
 
+
+
+
+
+
+.showcase {
+  position: relative;
+
+  min-height: 508px;
+  padding-top: 100px;
+  /*padding-bottom: 80px;
+*/
+  background: url(../img/showcase-bg.jpg) no-repeat center center;
+  background-color: #e3edf6;
+}
+
+.showcase-info {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 50px 0;
+
+  background: #fff;
+  text-align: center;
+}
+
+
+
+
+
+
+.showcase-info::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  /* right: 0; */
+  bottom: 202px;
+  width: 100%;
+  height: 58px;
+  background: url(../img/showcase-shape.png) no-repeat center;
+  background-size: 100% auto;
+  /* z-index: 1; */
+}
+
+.showcase-img {
+  /*position: relative;*/
+  display: block;
+  /*width: 458px;*/
+  /*height: 352px;*/
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+
+.about-slogan {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+}
+
+
+
+
+.about-lead {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+}
+
+
+
+
+.all-reasons-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.reason {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 256px;
+  overflow: hidden;
+}
+
+
+
+.reason-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 256px;
+  overflow: hidden;
+
+}
+
+.reason-item:nth-child(2) {
+  flex-direction: row-reverse;
+}
 
 .reason {
   position: relative;
@@ -186,36 +289,45 @@ a {
 }
 
 
+
+
 .reason-info {
   width: 33.33%;
   min-height: 256px;
-  flex-grow: 1;
   padding: 47px 38px 39px;
   background-color: #81b3d2;
   color: #fff;
   text-align: center;
 }
 
-.reason-img {
+
+
+.reason-foto {
   position: relative;
   width: 66.66%;
   background-color: #deebf4;
-  /*height: inherit;*/
 }
 
-.reason-foto {
-
+.reason-foto img {
+   display: block;
+/*  top: 50%;
+  right: 0;
+  left: 0;*/
+  width: 100%;
 }
 
 .reason-title {
-  margin: 0 auto 23px;
+  margin: 0 auto;
   max-width: 160px;
   font-size: 21px;
   line-height: 21px;
 }
 
 
-
+.reason-text {
+  margin-top: 21px;
+  margin-bottom: 0;
+}
 
 
 
@@ -223,36 +335,28 @@ a {
 
 
 .features {
-  padding: 56px 0 82px;
+  padding: 26px 0 82px;
    background-color: #fff;
 }
 
 
 .feature-list {
   display: flex;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-
 .feature-item {
   position: relative;
+  width: 33.33%;
   padding-left: 48px;
   padding-right: 48px;
   padding-top: 105px;
   text-align: center;
 }
 
-
-/*для иконок*/
-/*.features-item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-}
-*/
 
 .features-item-title {
   margin: 0 0 23px;
@@ -264,7 +368,13 @@ a {
   margin: 0;
 }
 
-/*3,4,5 причины*/
+
+
+
+
+
+3,4,5 причины
+
 .reasons {
   padding: 47px 0 60px;
   background-color: #f2f2f2;
@@ -275,7 +385,9 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: #f2f2f2;
 }
+
 
 .reasons-item {
   position: relative;
@@ -286,15 +398,23 @@ a {
 }
 
 .reasons-item-title {
-  margin: 0 auto 23px;
+  /*padding-top: 28px;*/
+  margin: 23px auto 23px;
   max-width: 160px;
   font-size: 21px;
   line-height: 21px;
 }
 
 .reasons-item-text {
-  margin: 21px 0 0;
+  margin: 21px 0 21px;
 }
+
+
+
+
+
+
+
 
 
 
