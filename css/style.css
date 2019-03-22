@@ -747,17 +747,15 @@ a {
   opacity: 0.5;
 }
 
+/*ФИЛТР ШКАЛА catalog НАЧАЛО*/
+
 .filters-price-fieldset {
   width: 318px;
   margin: 0;
   padding: 0;
   margin-left: 330px;
   border: 0;
-}
 
-
-/*ФИЛТР ШКАЛА catalog НАЧАЛО*/
-.filter-range {
   color: #ffffff;
   text-transform: uppercase;
 }
