@@ -1336,3 +1336,54 @@ a {
   fill: #bdbbbc;
 }
 
+
+/*анимация модалки происк гостиницы в седоне*/
+
+.search-form-hide {
+animation-name: formhide 0.7s forwards;
+}
+
+.search-form-show {
+animation:-name: formshow 0.7s forwards;
+}
+
+@keyframes formshow {
+  0% {
+ opacity: 0;
+  }
+
+  100% {
+  opacity: 1;
+  }
+}
+
+/*@keyframes formshow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}*/
+
+@keyframes formhide {
+  0% {
+  transform: translateY(0);
+  }
+
+  100% {
+transform-origin: top;
+  }
+}
+
+@keyframes formhide {
+  0% {
+  transform: translateY(0);
+  }
+
+  100% {
+  box-shadow: none;
+  transform-origin: top;
+  }
+}
